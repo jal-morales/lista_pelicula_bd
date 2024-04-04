@@ -56,6 +56,7 @@ public void eliminarPelicula(PathVariable Long id){
     return peliculasServices.eliminarPelicula(id);
 }
 */
+/*Sale error revisar */
 
    
 
