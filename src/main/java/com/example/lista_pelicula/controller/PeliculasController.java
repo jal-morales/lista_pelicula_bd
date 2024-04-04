@@ -50,15 +50,12 @@ public Peliculas modificarPelicula(@PathVariable Long id, @RequestBody Peliculas
     return peliculasServices.modificarPelicula(id, peliculas);
 }
 
-/*
-@DeleteMapping("/{id}")
-public void eliminarPelicula(PathVariable Long id){
-    return peliculasServices.eliminarPelicula(id);
-}
-*/
-/*Sale error revisar */
 
-   
+@DeleteMapping("/{id}")
+public void eliminarPelicula(@PathVariable Long id){
+    peliculasServices.eliminarPelicula(id);
+}
+
 
 
 }
