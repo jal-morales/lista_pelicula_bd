@@ -50,7 +50,7 @@ public Peliculas createPelicula(@RequestBody Peliculas peliculas){
 
 @PutMapping("/{id}")
 public Peliculas modificarPelicula(@PathVariable Long id, @RequestBody Peliculas peliculas) {
-    //TODO: process PUT request
+    
     
     return peliculasServices.modificarPelicula(id, peliculas);
 }
