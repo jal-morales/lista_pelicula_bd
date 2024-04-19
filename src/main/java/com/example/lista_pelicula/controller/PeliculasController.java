@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.lista_pelicula.model.Peliculas;
 import com.example.lista_pelicula.service.PeliculasServices;
 
-import lombok.extern.slf4j.Slf4j;
+
 
 import java.util.List;
 import java.util.Optional;
@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 
 
 @RestController
-@Slf4j
+
 @RequestMapping("/Peliculas")
 public class PeliculasController {
 @Autowired
