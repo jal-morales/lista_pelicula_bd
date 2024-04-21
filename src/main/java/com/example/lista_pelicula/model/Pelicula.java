@@ -1,5 +1,4 @@
 package com.example.lista_pelicula.model;
-import org.hibernate.boot.jaxb.hbm.internal.RepresentationModeConverter;
 import org.springframework.hateoas.RepresentationModel;
 
 /*Librerias necesarias para interactuar con BD*/
