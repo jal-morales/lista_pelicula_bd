@@ -31,3 +31,4 @@ build/
 
 ### VS Code ###
 .vscode/
+src/test/java/com/example/lista_pelicula/repository/PeliculasRepositoryTest.java

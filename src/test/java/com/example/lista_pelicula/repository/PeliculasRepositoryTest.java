@@ -2,7 +2,6 @@ package com.example.lista_pelicula.repository;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -36,5 +35,7 @@ public class PeliculasRepositoryTest {
         /*Aca estamos pasando el valor que esperamos, usamos el get de la variable resultado para obtener el dato del objeto */
         assertEquals("TITANIC", resultado.getNombre());
     }
+
+    
 
 }
