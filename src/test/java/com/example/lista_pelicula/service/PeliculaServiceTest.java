@@ -10,7 +10,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import com.example.lista_pelicula.model.Peliculas;
+import com.example.lista_pelicula.model.Pelicula;
 import com.example.lista_pelicula.repository.PeliculasRepository;
 
 @ExtendWith(MockitoExtension.class)
@@ -27,12 +27,12 @@ public class PeliculaServiceTest {
     @Test
     public void guardarPeliculaTest() {
 
-        Peliculas pelicula = new Peliculas();
+        Pelicula pelicula = new Pelicula();
         pelicula.setNombre("mipelicula");
 
         when(peliculasRepositoryMock.save(any())).thenReturn(pelicula);
 
-        Peliculas resultado = peliculasServiceImpl.createPelicula(pelicula);
+        Pelicula resultado = peliculasServiceImpl.createPelicula(pelicula);
 
         assertEquals("mipelicula", resultado.getNombre());
     }

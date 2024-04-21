@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
-import com.example.lista_pelicula.model.Peliculas;
+import com.example.lista_pelicula.model.Pelicula;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
@@ -19,7 +19,7 @@ public class PeliculasRepositoryTest {
     @Test
     public void createPelicula() {
        /*Aca creamos un objeto pelicula  */ 
-        Peliculas peliculas = new Peliculas();
+        Pelicula peliculas = new Pelicula();
         /*Aca seteamos el nombre de la pelicula  */
         peliculas.setNombre("TITANIC");
         peliculas.setAnio("2024");
@@ -28,7 +28,7 @@ public class PeliculasRepositoryTest {
         peliculas.setSinopsis("es una película épica de romance");
 
         /*Aca hacemos una variable de tipo Pelicula donde donde almacenaremos la pelicula creada llamada TITANIC */
-        Peliculas resultado = peliculasRepository.save(peliculas);
+        Pelicula resultado = peliculasRepository.save(peliculas);
 
         /*Aca estamos usando una clase de Junit donde estamos validando que el ID de la pelicula no sea nulo */
         assertNotNull(resultado.getId_pelicula());

@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.lista_pelicula.model.Peliculas;
+import com.example.lista_pelicula.model.Pelicula;
 import com.example.lista_pelicula.repository.PeliculasRepository;
 
 
@@ -18,24 +18,24 @@ public class PeliculasServicesImpl implements PeliculasServices{
     private  PeliculasRepository peliculasRepository;
 
     @Override
-    public List<Peliculas> getAllPeliculas(){
+    public List<Pelicula> getAllPeliculas(){
         return peliculasRepository.findAll();
     }
 
    @Override
-   public Optional<Peliculas> getPeliculasById(Long id_peliculas){
+   public Optional<Pelicula> getPeliculasById(Long id_peliculas){
 
     return peliculasRepository.findById(id_peliculas);
    }
 
 @Override
-public Peliculas createPelicula(Peliculas peliculas)
+public Pelicula createPelicula(Pelicula peliculas)
 {
 
     return peliculasRepository.save(peliculas);
 }
 @Override
-public Peliculas  modificarPelicula(Long id, Peliculas pelicula){
+public Pelicula  modificarPelicula(Long id, Pelicula pelicula){
     if(peliculasRepository.existsById(id)){
         pelicula.setId_pelicula(id);
         return peliculasRepository.save(pelicula);

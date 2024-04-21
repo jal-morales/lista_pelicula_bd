@@ -1,4 +1,7 @@
 package com.example.lista_pelicula.model;
+import org.hibernate.boot.jaxb.hbm.internal.RepresentationModeConverter;
+import org.springframework.hateoas.RepresentationModel;
+
 /*Librerias necesarias para interactuar con BD*/
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -11,7 +14,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "peliculas")
-public class Peliculas {
+public class Pelicula extends RepresentationModel<Pelicula>{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_pelicula")
